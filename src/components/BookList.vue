@@ -20,7 +20,11 @@ export default{
             ]
         }
     }
-}
+};
+
+import BookItem  from './BookItem'
+
+
 </script>
 
 <style>
