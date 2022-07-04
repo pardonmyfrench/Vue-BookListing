@@ -1,19 +1,20 @@
 <template>
     <div>
         <h1>{{ title }}</h1>
-        <ul>
-        <li v-for="book in books">{{book.title}}:{{book.author}}</li>
-
+      <ul>
             <book-item v-for="book in books" :book="book"></book-item>
         </ul>
+        <hr>
+        <h1>{{ titleAddBook }}</h1>
+
         <book-form @addBook='appendBook'></book-form>
     </div>
 </template>
 
 <script>
 
-import BookItem  from './BookItem';
-import BookForm  from './BookForm';
+import BookItem from './BookItem';
+import BookForm from './BookForm';
 
 
 export default{
@@ -21,6 +22,7 @@ export default{
     data () {
         return{
             title:"All Books",
+            titleAddBook: "Add a Book",
             books: [
             {title: 'Self-Reliance', author: 'Ralph Waldo Emerson'},
             {title: 'American Gods', author: 'Neil Gaiman'},
@@ -34,7 +36,7 @@ export default{
     },
     methods :{
         appendBook(bookTitle, bookAuthor){
-            this.books.push({ title: bookTitle, author: bookAuthor })
+            this.books.push({ title: bookTitle, author: bookAuthor });
         }
     }
 };
