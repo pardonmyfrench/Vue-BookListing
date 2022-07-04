@@ -4,6 +4,7 @@
         <ul>
             <book-item v-for="book in books" :book="book"></book-item>
         </ul>
+        <book-form></book-form>
     </div>
 </template>
 
@@ -26,6 +27,8 @@ export default{
 };
 
 import BookItem  from './BookItem'
+
+import BookForm  from './BookForm'
 
 
 </script>
