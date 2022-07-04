@@ -9,6 +9,11 @@
 </template>
 
 <script>
+
+import BookItem  from './BookItem';
+import BookForm  from './BookForm';
+
+
 export default{
     name: "BookList",
     data () {
@@ -22,13 +27,11 @@ export default{
         }
     },
     components: {
-        BookItem
+        BookItem,
+        BookForm
     }
 };
 
-import BookItem  from './BookItem'
-
-import BookForm  from './BookForm'
 
 
 </script>
